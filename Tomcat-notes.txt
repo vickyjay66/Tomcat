@@ -305,3 +305,251 @@ Assignment
 ==========
 
 create a multiple users and try to access.
+
+
+=======================================================================
+
+
+
+Maven  --> .war  ----> deploy into app server(tomcat)
+
+
+
+
+
+IQ] How to change port number and why we need to change the port number?
+
+scenario: I need to install tomcat & Jenkins in the same server.
+
+ANS: tomcat port number is 8080 and Jenkins port number also 8080 --> Then we are getting port conflict . [java.net.BindException we will get] , so that we are changing the port numbers.
+
+
+step 1: goto conf directory.
+
+    cd /opt/apache-tomcat-9.0.91/conf
+
+step 2: open server.xml
+   
+    goto line number 71 and change the port.
+
+step 3: stop the tomcat server and start the tomcat server.
+
+step 4: now try to access with different port number.
+
+NOTE: please make sure to enable the port in Security groups.
+
+
+
+
+
+
+
+
+
+
+
+
+=================================================================
+
+
+
+Now i want to deploy application into tomcat server
+===================================================
+
+step 1:
+-------
+copy war file into your local[Downloads]
+----------------------------------------
+
+cp target/maven-web-application.war /tmp/
+
+scp -i /c/Users/gpras/Downloads/kkdevopsbl3b2.pem ec2-user@52.66.118.71:/tmp/maven-web-application.war  /c/Users/gpras/Downloads/maven-web-application.war
+
+step 2: Access that web application from browser.
+------
+
+http://13.233.32.177:9090/maven-web-application
+
+
+
+How to stop the application access?
+
+In GUI pls select stop for that application
+
+
+how to undeploy?
+
+Click on undeploy
+
+
+How to do the patch?
+
+cd webapps/maven-web-application/jsps/  --> update the code and access the app
+
+
+How to Deploy directory or WAR file located on server ?
+
+
+context path:          /kkapp
+WAR or Directory path:  /tmp/maven-web-application.war
+
+
+
+
+
+
+
+web servers                vs                  app servers
+-------------------------------------------------------------
+
+1. Handle the static requests                   1. Business logic , dynamic content
+2. Apache Httpd server,ngnix                    2.  tomcat, windlfy, etc
+3. Load balancing 				                 3. Businees logic
+
+
+
+
+
+
+
+
+
+
+Apache httpd server [web server]
+==================================
+stpe 1: check where that service is running or not
+
+
+user name:apache  
+
+service httpd.service status
+
+
+step 2: yum install httpd -y
+step 3: start the server
+    service httpd start
+
+NOTE: default port : 80
+
+http://65.0.182.70
+
+step 4: make to sure to enable inbould rules
+
+
+step 5:  
+
+
+what is the default path? /var/www/html 
+
+
+/etc/httpd/conf  --> default configuration location
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+ 										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
