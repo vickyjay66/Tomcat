@@ -123,7 +123,8 @@ Tomcat (Apache Tomcat) is an open-source web container used to deploy and run Ja
    sh shutdown.sh
    # OR
    sh catalina.sh stop
-   ```
+HERE WE SHOULD CHANGE PERMISSIONS TO SH FILES
+CHMOD U+X *.sh```
 
 ### Check if Tomcat is Running:
 ```bash
