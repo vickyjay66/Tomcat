@@ -224,3 +224,14 @@ Now, you can use `startTomcat` and `stopTomcat` from any directory.
 
 This document is now properly formatted and complete for GitHub. Let me know if you need any modifications! 🚀
 
+
+
+
+TCP ports are numbered from 0 to 65535, and are categorized into well-known (0-1023), registered (1024-49151), and dynamic/private (49152-65535) ports. 
+Here's a more detailed breakdown: 
+Well-known ports (0-1023):
+These ports are reserved for common, widely used services like HTTP (80), HTTPS (443), SMTP (25), and SSH (22).
+Registered ports (1024-49151):
+These ports are used by applications or services that are less common but still require specific ports to function properly, such as Remote Desktop Protocol (3389).
+Dynamic/Private ports (49152-65535):
+These ports are used for temporary or short-lived connections and are not assigned to specific services, often used as source ports for outgoing connections.
